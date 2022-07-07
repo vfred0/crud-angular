@@ -1,0 +1,39 @@
+.c-most-wanted-content {
+  display: grid;
+  grid-gap: em(12);
+  align-items: center;
+  background-color: $grey-100;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  border-radius: em(6);
+  @include only-sm() {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &__container {
+    display: grid;
+    grid-gap: em(18);
+    @include only-sm() {
+      order: 2;
+      background-color: $neutral-white;
+      width: 100%;
+      justify-items: center;
+    }
+  }
+
+  &__title {
+    color: $grey-700;
+  }
+  &__wrapper-texts {
+    display: grid;
+    grid-gap: em(6);
+    @include only-sm() {
+      text-align: center;
+    }
+  }
+  &__product-name {
+    color: $grey-900;
+  }
+  &__image {
+    width: 50%;
+  }
+}

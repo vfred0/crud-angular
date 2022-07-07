@@ -1,0 +1,53 @@
+.c-header {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  // position: fixed;
+  // z-index: $z-fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // max-width: 1200px;
+  // margin: 0 auto;
+  // background-color: $neutral-white;
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: em(8);
+    &-right {
+      display: flex;
+      gap: em(16);
+    }
+    &-left {
+      @include only-sm() {
+        display: none;
+      }
+      display: flex;
+      gap: em(16);
+    }
+  }
+
+  &__menu-link {
+    color: $green-900;
+    font-weight: 600;
+  }
+  &__menu-icon {
+    fill: $grey-900;
+  }
+  &__menu-item {
+    &--toggle {
+      @include md() {
+        display: none;
+      }
+    }
+  }
+  &__logo {
+    width: em(32);
+
+    @include md {
+      width: em(40);
+    }
+    @include lg {
+      width: em(48);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<form class="c-form" (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+  <input class="c-form__image"
+    type="image"
+    src="https://imgs.search.brave.com/aVb8vCpAuL_XnIBFV2EzUNKge6--5oVsRZzW3tfwktY/rs:fit:1000:1000:1/g:ce/aHR0cHM6Ly93d3cu/YmVybmVvdXRlcndl/YXIuY29tL21tNS9n/cmFwaGljcy8wMDAw/MDAwMS9ic20zOF9t/X3NsYS5qcGc"
+    alt=""
+  />
+  <div class="c-form__details">
+    <input formControlName="productName" type="text" >
+    <input formControlName="productPrice" type="number" id="">
+  </div>
+  <div class="c-form__buttons">
+    <input [disabled]="hasBeenEdited()" type="button" value="Editar">
+    <input (click)="onBack()" type="button" value="Volver">
+  </div>
+</form>

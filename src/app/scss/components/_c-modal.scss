@@ -1,0 +1,34 @@
+.c-modal {
+  height: 100%;
+  width: 60vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  background-color: $neutral-white;
+  display: none;
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: em(12);
+    &-link {
+      color: $grey-900;
+      font-weight: 500;
+    }
+    padding-top: em(18);
+  }
+
+  &__buttons {
+    display: flex;
+    padding: em(16);
+  }
+
+  &.is-active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: $z-modal;
+  }
+}
