@@ -6,16 +6,31 @@
   </div>
 
   <div class="c-form__details">
-    <input formControlName="description" type="text" />
-    <input formControlName="price" type="number" id="" />
+    Nombre
+    <div class="c-bar-search">
+      <input class="c-bar-search__input" formControlName="description" type="text" />
+      <svg class="c-bar-search__icon" viewBox="0 0 12 18">
+        <path d="M3.112 9.058a.834.834 0 1 1 .61 1.55 2.982 2.982 0 0 0-1.889 2.775v1.45a.833.833 0 0 0 .834.834h6.666a.833.833 0 0 0 .834-.834v-1.372a3.048 3.048 0 0 0-1.964-2.85.833.833 0 1 1 .594-1.556 4.715 4.715 0 0 1 3.036 4.406v1.372a2.5 2.5 0 0 1-2.5 2.5H2.667a2.5 2.5 0 0 1-2.5-2.5v-1.45a4.649 4.649 0 0 1 2.945-4.325ZM6 .667A3.333 3.333 0 0 1 9.333 4v1.667a3.333 3.333 0 1 1-6.666 0V4A3.333 3.333 0 0 1 6 .667Zm0 1.666A1.667 1.667 0 0 0 4.333 4v1.667a1.667 1.667 0 0 0 3.334 0V4A1.667 1.667 0 0 0 6 2.333Z"/>
+      </svg>
+    </div>
+    Precio
+    <div class="c-bar-search">
+      <input class="c-bar-search__input" formControlName="price" type="number" id="" />
+      <svg class="c-bar-search__icon" fill="none" viewBox="0 0 20 20">
+        <path stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2V6Zm0 0c1.11 0 2.08.402 2.599 1L10 6Zm0 0V5v1Zm0 0v8-8Zm0 8v1-1Zm0 0c-1.11 0-2.08-.402-2.599-1L10 14Zm9-4a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+      </svg>
+    </div>
   </div>
   <div class="c-form__buttons">
-    <input
+    <input class="c-button c-button--default"
       (click)="onSubmit()"
       [disabled]="hasNotBeenEdited()"
       type="submit"
       [value]="this.typeButton"
     />
-    <input (click)="onBack()" type="button" value="Volver" />
+    <input class="c-button c-button--default"
+      (click)="onBack()" 
+      type="button" 
+      value="Volver"/>
   </div>
 </form>
