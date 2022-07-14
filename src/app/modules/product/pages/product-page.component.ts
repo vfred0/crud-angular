@@ -63,7 +63,8 @@ export class ProductPageComponent implements OnInit {
     if (this.typeButton === TypeButton.CREATE) {         
       let result:Product = new Product(0, this.product.image, this.formGroup.get('description')?.value, this.formGroup.get('price')?.value);
       this.productService.newProduct(result).subscribe( () => 
-        this.formGroup.reset()        
+        {this.formGroup.reset()      
+        this.product.image = 'https://is.gd/1nGf23';  }
       );              
     } else {      
       this.product.setDescription(this.formGroup.get('description')?.value);

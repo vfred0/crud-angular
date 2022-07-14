@@ -1,19 +1,27 @@
-.c-form {
-  margin: 0 auto;
-  width: 50%;
-  height: 100vh;
-  min-width: 320px;
-  display: grid;
-  align-content: space-around;
-  justify-content: center;
+.c-form {   
+  display: grid;  
   justify-items: center;
+  gap: em(24);
   &__container{
     background-color: rgb(163, 162, 162);
     position: relative;
     min-width: 320px; 
     height: 40vh;   
     border-radius: em(6);
+    
   }
+
+  &__details{
+    display: grid;
+    gap: em(12);
+    
+  }
+  
+  &__buttons {
+    display: flex;
+    gap: em(6);
+  }
+
   &__upload {
     top: 0;
     position: absolute; 

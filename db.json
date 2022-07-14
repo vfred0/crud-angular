@@ -3,8 +3,20 @@
     {
       "id": 1,
       "image": "https://is.gd/1nGf23",
-      "description": "camiseta de manga larga unisex",
+      "description": "camiseta de manga larga unisexssss",
       "price": 29.89
+    },
+    {
+      "id": 2,
+      "image": "https://is.gd/1nGf23",
+      "description": "funciona",
+      "price": 123
+    },
+    {
+      "id": 3,
+      "image": "https://is.gd/1nGf23",
+      "description": "Camiseta de prueba",
+      "price": 12.9
     }
   ]
 }

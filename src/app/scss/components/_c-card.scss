@@ -9,6 +9,7 @@
   position: relative;
   &__image {
     border-radius: em(6);
+    cursor: pointer;
   }
   &__wrapper-texts {
     display: flex;
@@ -35,17 +36,25 @@
     border-radius: em(6);
   }
   
-  &-add {
+  &--add {
     display: flex;      
     justify-content: center;
     align-items: center;
     background-color: $grey-100;
     border-radius: 0.375em;
+    cursor: pointer;
+    &:hover {
+      background-color: $grey-200;
+    }
     
     &__icon {
       fill: $grey-600;
       width: em(32);      
     }
     min-height: 347px;
+  }
+    
+  &:hover {
+    background-color: $grey-200;
   }
 }
