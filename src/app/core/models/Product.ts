@@ -1,4 +1,7 @@
 export class Product {
+  isPrice(value: number) {
+    return this.price === value;
+  }
   
   id: number;
   image: string;

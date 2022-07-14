@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TypeButton } from 'src/app/core/types/TypeButton';
 
 
 @Component({
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   
 })
 export class ProductEditComponent implements OnInit {
+  typeButton: TypeButton = TypeButton.UPDATE;
   ngOnInit(): void {
     
   }
