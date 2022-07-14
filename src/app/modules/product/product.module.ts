@@ -18,8 +18,7 @@ import {ProductPageComponent } from './pages/product-page.component';
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule,
-    // FormsModule,
+    ProductRoutingModule,    
     ReactiveFormsModule
   ]
 })

@@ -7,16 +7,7 @@ import { ProductService } from '../../services/product.service';
   templateUrl: './delete.component.html',
 })
 export class DeleteComponent implements OnInit {  
-  // @Input() product: Product;
-  // constructor(private productService: ProductService) { 
-  //   this.product = new Product();
-  // }
-
   ngOnInit(): void {
   }
-
-  // onClick(): void {
-  //   this.productService.deleteProduct(this.product.id);    
-  // }
 
 }

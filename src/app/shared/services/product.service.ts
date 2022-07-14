@@ -13,8 +13,8 @@ export class ProductService {
   constructor(private http: HttpClient) {  }
 
 
-  newProduct(product: Product) {
-    return this.http.post(this.API, product);    
+  newProduct(product: Product): Observable<void> {    
+    return this.http.post<void>(this.API, product);    
   }
 
   getProducts(): Observable<Product[]> {  
