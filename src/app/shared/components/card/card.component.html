@@ -1,9 +1,9 @@
 <div class="c-card" >
-  <img [src]="image" class="c-card__image" />
+  <img (click)="onClick()" [src]="product.image" class="c-card__image" />
   <div class="c-card__wrapper-texts">
     <span class="o-font-f2-normal c-card__title" (click)="onClick()">
-      {{ productName }}
+      {{ product.description }}
     </span>
-    <span class="o-font-f2-normal c-card__price"> ${{ price }} </span>
+    <span class="o-font-f2-normal c-card__price"> ${{ this.getPrice() }} </span>
   </div>
 </div>

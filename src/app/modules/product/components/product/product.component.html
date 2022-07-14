@@ -1,0 +1,21 @@
+<form class="c-form" [formGroup]="formGroup">
+  
+  <div class="c-form__container">
+    <img class="c-form__image" type="image" [src]="this.product.image" alt="" />
+    <input class="c-form__upload"  type="file" (change)="onFileSelected($event)" />
+  </div>
+
+  <div class="c-form__details">
+    <input formControlName="description" type="text" />
+    <input formControlName="price" type="number" id="" />
+  </div>
+  <div class="c-form__buttons">
+    <input
+      (click)="onSubmit()"
+      [disabled]="hasNotBeenEdited()"
+      type="submit"
+      [value]="this.typeButton"
+    />
+    <input (click)="onBack()" type="button" value="Volver" />
+  </div>
+</form>

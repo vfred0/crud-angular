@@ -1,0 +1,21 @@
+.c-form {
+  &__upload {
+    top: 0;
+    position: absolute;
+    width: 100%;    
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__container{
+    position: relative;    
+    height: 30vmin;
+  }
+
+  &__image{
+    width: 30vmin;
+    object-fit: scale-down;
+    height: 100%;
+  }
+}
