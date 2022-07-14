@@ -13,6 +13,7 @@ specifiers:
   '@angular/platform-browser-dynamic': ^14.0.0
   '@angular/router': ^14.0.0
   '@types/jasmine': ~4.0.0
+  angular-svg-icon: ^14.0.0
   jasmine-core: ~4.1.0
   json-server: ^0.17.0
   karma: ~6.3.0
@@ -43,6 +44,7 @@ devDependencies:
   '@angular/cli': 14.0.5
   '@angular/compiler-cli': 14.0.5_zpefgt72khwrbcajczg5cki5ui
   '@types/jasmine': 4.0.3
+  angular-svg-icon: 14.0.0_up4ahvy7h7pludtfht5f75kszu
   jasmine-core: 4.1.1
   json-server: 0.17.0
   karma: 6.3.20
@@ -276,7 +278,6 @@ packages:
       '@angular/core': 14.0.5_rxjs@7.5.5+zone.js@0.11.6
       rxjs: 7.5.5
       tslib: 2.4.0
-    dev: false
 
   /@angular/compiler-cli/14.0.5_zpefgt72khwrbcajczg5cki5ui:
     resolution: {integrity: sha512-1bzojB5OoI/YLC7er+h+v1teG4Pp4jUxsFm9FmmgGaJ4gfadsPshzhZNASKoq/g7bQB7RnX0kgTGwwQImpirwQ==}
@@ -2304,6 +2305,19 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+    dev: true
+
+  /angular-svg-icon/14.0.0_up4ahvy7h7pludtfht5f75kszu:
+    resolution: {integrity: sha512-WIEl7vp2wtacRauf/Rmfcyy5PTg5P4FHhdmm6oy3hWOY9aK/QEqEW5zzLKDXsh1djRlChLWnnC3ptaPC0wyHDw==}
+    peerDependencies:
+      '@angular/common': '>=14.0.0'
+      '@angular/core': '>=14.0.0'
+      rxjs: '>=6.6.3'
+    dependencies:
+      '@angular/common': 14.0.5_dzujbj7drp6g2oxeynnik3virq
+      '@angular/core': 14.0.5_rxjs@7.5.5+zone.js@0.11.6
+      rxjs: 7.5.5
+      tslib: 2.4.0
     dev: true
 
   /ansi-align/3.0.1:

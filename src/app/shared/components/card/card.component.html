@@ -1,4 +1,4 @@
-<div class="c-card" >
+<div class="c-card">
   <img (click)="onClick()" [src]="product.image" class="c-card__image" />
   <div class="c-card__wrapper-texts">
     <span class="o-font-f2-normal c-card__title" (click)="onClick()">
@@ -6,4 +6,5 @@
     </span>
     <span class="o-font-f2-normal c-card__price"> ${{ this.getPrice() }} </span>
   </div>
+  <app-delete class="c-card__delete" (click)="this.onDelete()"> </app-delete>
 </div>

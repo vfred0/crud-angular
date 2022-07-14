@@ -1,10 +1,4 @@
 .c-card {
-  // display: flex;
-  // flex-direction: column;
-  // gap: em(12);
-  // background-color: $grey-100;
-  // border-radius: em(6);
-  // padding: em(16);
   display: grid;
   gap: 0.75em;
   background-color: #e6e6e6;
@@ -33,11 +27,25 @@
     white-space: nowrap;
   }
 
-  &__likes {
+  &__delete {
     position: absolute;
     top: em(8);
     left: em(8);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: em(6);
+  }
+  
+  &-add {
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    background-color: $grey-100;
+    border-radius: 0.375em;
+    
+    &__icon {
+      fill: $grey-600;
+      width: em(32);      
+    }
+    min-height: 347px;
   }
 }

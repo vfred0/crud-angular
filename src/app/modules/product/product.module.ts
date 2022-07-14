@@ -3,16 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { ProductRoutingModule } from './product-routing.module';
 import {  ReactiveFormsModule } from '@angular/forms';
-import { ProductEditComponent } from './pages/product-edit/product-edit.component';
-import { ProductAddComponent } from './pages/product-add/product-add.component';
-import { ProductComponent } from './components/product/product.component';
+
+import { ProductAddComponent } from './components/product-add/product-add.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import {ProductPageComponent } from './pages/product-page.component';
+
 
 
 @NgModule({
   declarations: [        
     ProductEditComponent,
     ProductAddComponent,
-    ProductComponent
+    ProductPageComponent
   ],
   imports: [
     CommonModule,

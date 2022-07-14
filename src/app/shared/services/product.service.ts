@@ -30,8 +30,8 @@ export class ProductService {
     this.http.put<void>(`${this.API}/${product.id}`, product).subscribe();
   }
 
-  deleteProduct(id: number):void {
-    this.http.delete<void>(`${this.API}/${id}`).subscribe();
+  deleteProduct(id: number):Observable<void> {
+    return this.http.delete<void>(`${this.API}/${id}`) ;
   }
 
 }

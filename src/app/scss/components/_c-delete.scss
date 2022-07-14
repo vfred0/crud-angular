@@ -1,0 +1,31 @@
+.c-delete {
+  $tag: &;
+  padding: em(8);
+  border-radius: em(6);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: em(12);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  
+  background: $red-200;
+  
+  &:hover {
+    background: $red-900;
+    #{$tag}__text {
+      color: $red-100;
+    }
+    #{$tag}__icon {
+      fill: $red-100;
+    }
+  }
+  
+  &__text {
+    color: $red-900;
+  }
+  &__icon {
+    display: grid;       
+  }
+}

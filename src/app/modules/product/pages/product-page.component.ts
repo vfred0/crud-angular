@@ -5,11 +5,10 @@ import { Product } from 'src/app/core/models/Product';
 import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  selector: 'app-product-page',
+  templateUrl: './product-page.component.html',  
 })
-export class ProductComponent implements OnInit {
+export class ProductPageComponent implements OnInit {
   @Input() typeButton: string = 'Insertar';
   
   formGroup:FormGroup = new FormGroup({}); 

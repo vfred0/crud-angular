@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Product } from 'src/app/core/models/Product';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-delete',
   templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.scss']
 })
-export class DeleteComponent implements OnInit {
-
-  constructor() { }
+export class DeleteComponent implements OnInit {  
+  // @Input() product: Product;
+  // constructor(private productService: ProductService) { 
+  //   this.product = new Product();
+  // }
 
   ngOnInit(): void {
   }
+
+  // onClick(): void {
+  //   this.productService.deleteProduct(this.product.id);    
+  // }
 
 }
