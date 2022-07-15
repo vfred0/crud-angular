@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './page/home-page/home-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { NotifierModule } from 'angular-notifier';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     CommonModule,
     HomeRoutingModule, 
     AngularSvgIconModule.forRoot(),
+    NotifierModule,
     SharedModule
   ]
 })

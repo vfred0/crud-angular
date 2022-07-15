@@ -1,18 +1,19 @@
 <section class="c-cards o-layout-main o-layout-spacing">
-  <span class="c-cards__title o-font-f1-main">CRUD con Angular + JSON Server</span>
+  <span class="c-cards__title o-font-f1-main"
+    >CRUD con Angular + JSON Server</span
+  >
   <div class="c-cards__container">
     <ng-container *ngFor="let product of getProducts()">
       <app-card
         [product]="product"
-        (onDeleteProduct)="this.onDelete(product)"
-      ></app-card>
+        (eventEmitterForDelete)="this.onDelete(product)"></app-card>
     </ng-container>
     <div class="c-card--add" (click)="this.redirectToAddProduct()">
-      <svg-icon        
+      <svg-icon
         src="assets/icons/add.svg"
         [class]="'c-card-add__icon o-icon-size-lg'"
-        [applyClass]="true"        
-      ></svg-icon>
+        [applyClass]="true"></svg-icon>
     </div>
   </div>
+  <notifier-container></notifier-container>
 </section>

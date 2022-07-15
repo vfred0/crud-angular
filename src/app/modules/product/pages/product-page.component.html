@@ -4,59 +4,56 @@
     <input
       class="c-form__upload"
       type="file"
-      (change)="onFileSelected($event)"
-    />
+      (change)="onFileSelected($event)" />
   </div>
 
   <div class="c-form__details">
-    <span class="c-form__title o-font-f1-subtitle">
-      Nombre
-    </span>
+    <span class="c-form__title o-font-f1-subtitle"> Nombre </span>
     <div class="c-bar-search">
       <input
-
-      class="c-bar-search__input o-font-f2-normal"
-      formControlName="description"
-      type="text"
-      />
+        class="c-bar-search__input o-font-f2-normal"
+        formControlName="description"
+        type="text" />
       <svg-icon
-      src="/assets/icons/user.svg"
-      [class]="'c-bar-search__icon o-icon-size-sm'"
-      [applyClass]="true"
-      ></svg-icon>
-      
+        src="/assets/icons/user.svg"
+        [class]="'c-bar-search__icon o-icon-size-sm'"
+        [applyClass]="true"></svg-icon>
     </div>
-    <span class="c-form__title o-font-f1-subtitle">
-      Precio
-    </span>    
+    <span class="c-form__title o-font-f1-subtitle"> Precio </span>
     <div class="c-bar-search">
       <input
-
         class="c-bar-search__input o-font-f2-normal"
         formControlName="price"
         type="number"
-        id=""
-      />
+        id="" />
       <svg-icon
         src="/assets/icons/price.svg"
         [class]="'c-bar-search__icon o-icon-size-sm'"
-        [applyClass]="true"
-      ></svg-icon>
+        [applyClass]="true"></svg-icon>
     </div>
   </div>
   <div class="c-form__buttons">
-    <input
-      class="c-button o-font-f1-section"
-      (click)="onSubmit()"
-      [disabled]="submitDisabled()"
-      type="submit"
-      [value]="this.typeButton"
-    />
-    <input
-      class="c-button o-font-f1-section"
-      (click)="onBack()"
-      type="button"
-      value="Volver"
-    />
+    <ng-template *ngIf="this.isTypeButtonEdit(); else addProduct">
+      <button
+        class="c-button o-font-f1-section"
+        [class.disabled]="this.submitDisabledForEdit()"
+        (click)="onSubmit()"
+        [value]="this.typeButton">
+        {{ this.typeButton }}
+      </button>
+    </ng-template>
+
+    <ng-template #addProduct>
+      <button formControlName="button"
+        class="c-button o-font-f1-section"
+        [class.disabled]="this.submitDisabledForCreate()"
+        (click)="onSubmit()"
+        [value]="this.typeButton">
+        {{ this.typeButton }}
+      </button>
+    </ng-template>
+    <button class="c-button o-font-f1-section" (click)="onBack()" type="button">
+      Volver
+    </button>
   </div>
 </form>

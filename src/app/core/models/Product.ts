@@ -1,4 +1,7 @@
 export class Product {
+  equals(product: Product) {
+    return this.id === product.id && this.image === product.image && this.description === product.description && this.price === product.price;
+  }
   isPrice(value: number) {
     return this.price === value;
   }

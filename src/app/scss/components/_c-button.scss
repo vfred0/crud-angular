@@ -10,4 +10,12 @@
     color: $neutral-white;
     cursor: pointer;
   }
+
+  &.disabled {
+    background-color: $grey-500;
+    color: $grey-600;
+    border: em(0.8) solid $grey-900;
+    cursor: not-allowed;
+  }
+
 }

@@ -6,5 +6,12 @@
     </span>
     <span class="o-font-f2-normal c-card__price"> ${{ this.getPrice() }} </span>
   </div>
-  <app-delete class="c-card__delete" (click)="this.onDelete()"> </app-delete>
+
+  <button class="c-card__delete c-delete" (click)="this.onDelete()">
+    <svg-icon
+      src="/assets/icons/delete.svg"
+      [class]="'c-delete__icon o-icon-size-sm'"
+      [applyClass]="true"></svg-icon>
+    <span class="c-delete__text o-font-f2-small"> Eliminar </span>
+  </button>
 </div>
