@@ -23,8 +23,7 @@ export class ProductPageComponent implements OnInit {
     this.typeButton = TypeButton.CREATE;
     this.formGroup = new FormGroup({
       description: new FormControl('', Validators['required']),
-      price: new FormControl('', Validators['required']),
-      buttonSubmit: new FormControl('', Validators['required']),
+      price: new FormControl('', Validators['required']),      
     });
     this.product.setImage('https://is.gd/1nGf23');
   }

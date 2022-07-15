@@ -35,6 +35,7 @@
   <div class="c-form__buttons">
     <ng-template *ngIf="this.isTypeButtonEdit(); else addProduct">
       <button
+        [disabled]="this.submitDisabledForEdit()"
         class="c-button o-font-f1-section"
         [class.disabled]="this.submitDisabledForEdit()"
         (click)="onSubmit()"
@@ -44,9 +45,10 @@
     </ng-template>
 
     <ng-template #addProduct>
-      <button formControlName="button"
+      <button
         class="c-button o-font-f1-section"
         [class.disabled]="this.submitDisabledForCreate()"
+        [disabled]="this.submitDisabledForCreate()"
         (click)="onSubmit()"
         [value]="this.typeButton">
         {{ this.typeButton }}
