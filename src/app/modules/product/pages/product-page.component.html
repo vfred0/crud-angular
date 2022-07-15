@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="c-form__buttons">
-    <ng-template *ngIf="this.isTypeButtonEdit(); else addProduct">
+    <ng-container *ngIf="this.isTypeButtonEdit(); else addProduct">
       <button
         [disabled]="this.submitDisabledForEdit()"
         class="c-button o-font-f1-section"
@@ -42,7 +42,7 @@
         [value]="this.typeButton">
         {{ this.typeButton }}
       </button>
-    </ng-template>
+    </ng-container>
 
     <ng-template #addProduct>
       <button

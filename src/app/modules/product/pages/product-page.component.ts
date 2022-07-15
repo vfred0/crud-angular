@@ -23,7 +23,7 @@ export class ProductPageComponent implements OnInit {
     this.typeButton = TypeButton.CREATE;
     this.formGroup = new FormGroup({
       description: new FormControl('', Validators['required']),
-      price: new FormControl('', Validators['required']),      
+      price: new FormControl('', Validators['required']),
     });
     this.product.setImage('https://is.gd/1nGf23');
   }
@@ -39,7 +39,7 @@ export class ProductPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.typeButton === TypeButton.UPDATE) {
+    if (this.isTypeButtonEdit()) {
       this.productService
         .getProduct(this.router.snapshot.params['id'])
         .subscribe((product: Product) => {
@@ -51,10 +51,11 @@ export class ProductPageComponent implements OnInit {
   }
 
   submitDisabledForEdit(): boolean {
-    return !this.isNewProduct() || this.formGroup.invalid;
+    console.log(this.isNewProduct());
+    return (this.isNewProduct() && this.formGroup.invalid);
   }
 
-  submitDisabledForCreate(): boolean {    
+  submitDisabledForCreate(): boolean {
     return this.formGroup.invalid;
   }
 
@@ -73,6 +74,7 @@ export class ProductPageComponent implements OnInit {
   }
 
   isTypeButtonEdit() {
+    
     return this.typeButton === TypeButton.UPDATE;
   }
 
@@ -81,7 +83,6 @@ export class ProductPageComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('SUbmit');
     if (this.typeButton === TypeButton.CREATE) {
       this.productService.newProduct(this.getProduct()).subscribe(() => {
         this.formGroup.reset();
